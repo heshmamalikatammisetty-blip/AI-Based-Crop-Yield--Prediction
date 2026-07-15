@@ -29,12 +29,18 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Train model
 model = RandomForestRegressor(
-    n_estimators=100,
-    random_state=42
+    n_estimators=50,
+    max_depth=15,
+    random_state=42,
+    n_jobs=-1
 )
 
 model.fit(X_train, y_train)
 
+joblib.dump(model, "models/crop_yield_model.pkl", compress=3)
+   
+
+joblib.dump(model, "models/crop_yield_model.pkl", compress=3)
 # Accuracy
 score = model.score(X_test, y_test)
 
