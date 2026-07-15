@@ -1,5 +1,3 @@
-"Tammisetty Heshma Malika ")
-
 An AI-based web application that predicts crop yield using Machine Learning and Streamlit.
 
 ## 🚀 Live Demo
